@@ -1,0 +1,71 @@
+    h1 {
+        background-color: #DD008b;
+        font-family: Asap Condensed, monospace;
+        height: 50px
+    }
+    #rec-button {
+        width: 24px;
+        height: 24px;
+    }
+    #logo {
+        padding-top: 0.3em;
+        padding-left: 0.1em;
+        width: 35px;
+        height: 35px;
+    }
+    body {
+        background-color: #ffffea;
+        font-family: Karla, monospace;
+        margin-bottom: 50px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+    #content {
+        margin-left: 10px;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        position: absolute;
+        top: 71.5px;
+        right: 0px;
+        background-color: #f9f9f9;
+        height: 100%; /* Full height */
+        position: fixed; /* Make it stick, even on scroll */
+        overflow: auto
+      }
+      
+      li{
+        display: block;
+        padding: 20px 16px;
+        text-decoration: none;
+      }
+      
+      /* Change the color on hover */
+      li:hover {
+        background-color: #DD008b;
+        color: white;
+      }
+      footer {
+        position: fixed;
+        height: 60px;
+        background-color: #000000;
+        color: #f9f9f9;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin-bottom: 0px;
+      }
+      textarea {
+        width: 85%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #000;
+        border-radius: 4px;
+        background-color: #fff;
+        resize: none;
+      }
