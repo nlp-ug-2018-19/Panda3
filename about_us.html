@@ -6,11 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <link rel="stylesheet" href="panda.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about_us_style.css">
 
     <script src="jquery-3.5.0.min.js"></script>
     <script src="sprite.js"></script>
+
+
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+
     <script>
         $(document).ready(function() {
             $('#jquery').css('width', '142px');
@@ -30,11 +35,11 @@
                     //alert("animation End");
                 }
             });
+               $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
 
-            $("#jquery").animateSprite('play', 'row3')
-
-        });
-    </script>
 </head>
 
 <body>
@@ -48,20 +53,93 @@
 
             <div class="about-section">
                 <div id="jquery"></div>
-                <h1>O nas</h1>
+                <h2>O nas</h2>
                 <p>Jesteśmy grupą niesamowitych pand, które potrafią przewidzieć pogodę~!</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Tabs - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+</head>
+<body>
+ 
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Krzysztof</a></li>
+    <li><a href="#tabs-2">Jakub</a></li>
+    <li><a href="#tabs-3">Nikola</a></li>
+    <li><a href="#tabs-4">Alexandra</a></li>
+    <li><a href="#tabs-5">Agnieszka</a></li>
+  </ul>
+  <div id="tabs-1">
+                                                  
+                                <div class="card">
+                                    <img src="https://wallpapertag.com/wallpaper/full/f/d/0/837133-vertical-kawaii-tare-panda-wallpaper-1920x1080.jpg" alt="Krzysztof">
+                                    <div class="new_container">
+                                        <h2>Panda Krzysztof</h2>
+                                        <p class="title">Team Leader</p>
+                                        <p>Team Leader naszej grupki pand. Ogarnia zadania ospałym misiom. Panda odpowiedzialna za graficzny aspekt naszej strony jak i jej wersję angielską.</p>
+                                    </div>
+                                </div>
+                            
+                        
+  </div>
+  <div id="tabs-2">
+                    <div class="card">
+                        <img src="https://wallpaperaccess.com/full/55408.jpg" alt="Kuba">
+                        <div class="new_container">
+                            <h2>Panda Kuba</h2>
+                                <p class="title">Koorganizator & Specjalista ds. graficznych</p>
+                                <p>Vice Team Leader. Machając bambusem pomaga rozdzielić zadania między puchate czarno-białe kuleczki. Panda odpowiedzialna za szkielet naszej strony oraz pomoc graficzna.</p>
+                            </div>
+                        </div>
+  </div>
+  <div id="tabs-3">
 
+                    <div class="card">
+                        <img src="https://wallpaperaccess.com/full/562233.jpg" alt="Nikola">
+                        <div class="new_container">
+                            <h2>Panda Nikola</h2>
+                            <p class="title">Reseach & Logistyka</p>
+                            <p>Panda szukająca matylków o chatbotowej tematyce. twórczyny podstronki "Kontakt" oraz pomoc logistyczna przy funkjach naszej strony.</p>
+                        </div>
+                    </div>
 
+  </div>
+    <div id="tabs-4">
+                    <div class="card">
+                        <img src="https://img4.goodfon.com/wallpaper/big/d/df/akrt-detskaia-panda-osen-listochki-arbuzik-nastroenie.jpg" alt="Ola">
+                        <div class="new_container">
+                            <h2>Panda Ola</h2>
+                            <p class="title">Reseach & Planner</p>
+                            <p>Panda rysująca bambusem w piasku jak nasza stronka ma wyglądać. Także panda pisząca "O programie".</p>
+                        </div>
+                    </div>
 
-                
-                <!--  <div id="dumpling"></div>-->
-
+  </div>
+  <div id="tabs-5">
+                          <div class="card">
+                        <img src="panda_aga.jpg" alt="Agnieszka">
+                        <div class="new_container">
+                            <h2>Panda Agnieszka</h2>
+                            <p class="title">Support</p>
+                            <p>Panda rysująca bambusem znaczki jak się poruszać po stronie: "Pomoc". Także panda odpowiedzialna za tę część ("O nas") naszej strony oraz pomoc techniczna.</p>
+                        </div>
+                    </div>
+  </div>
+</div>
+       
             </div>
-
-
-
-
-
         </div>
         <div class='sidebar_part'>
             <div>

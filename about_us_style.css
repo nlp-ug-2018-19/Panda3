@@ -1,9 +1,4 @@
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -12,6 +7,9 @@ html {
   box-sizing: inherit;
 }
 
+img {
+  width: 80%
+}
 .column {
   float: left;
   width: calc(33%-200px);
@@ -34,9 +32,12 @@ html {
 
 .container {
   padding: 0 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  text-align: center;
 }
 
-.container::after, .row::after {
+.new_container::after, .new_row::after {
   content: "";
   clear: both;
   display: table;
@@ -44,25 +45,9 @@ html {
 
 .title {
   color: grey;
+
 }
 
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.sidebar_part{  }
-
-.button:hover {
-  background-color: #555;
-}
 
 @media screen and (max-width: 650px) {
   .column {
