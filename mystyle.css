@@ -1,5 +1,8 @@
     h1 {
-        background-color: #DD008b;
+        background: url(images/background.png);
+        background-color: rgb(237, 248, 79);
+        background-repeat: no-repeat;
+        background-size: cover;
         font-family: Asap Condensed, monospace;
         height: 50px
     }
@@ -17,9 +20,9 @@
         height: 35px;
     }
     body {
-        background-color: #ffffea;
-        font-family: Karla, monospace;
-        margin-bottom: 50px;
+        background: linear-gradient(90deg, rgb(61, 137, 199), rgb(169, 216, 255));
+        font-family: Comfortaa, monospace;
+        margin-bottom: 0px;
         margin-left: 0;
         margin-right: 0;
         margin-top: 0;
@@ -50,8 +53,8 @@
       
       /* Change the color on hover */
       li:hover {
-        background-color: #DD008b;
-        color: white;
+        background-color: rgb(237, 248, 79);
+        color: black;
       }
       textarea {
         width: 100%;
@@ -65,17 +68,22 @@
       }
       .container{
         display: flex;
-
       }
       .footer {
+        font-family: Karla, monospace;
+        font-size: 10px;
         position: fixed;
-        height: 10%;
-        background-color: #000000;
+        height: 2%;
+        background-color: #00000054;
         color: #f9f9f9;
         bottom: 0px;
         left: 0px;
-        right: 0px;
+        right: 200px;
         margin-bottom: 0px;
+      }
+      .footer a {
+        text-decoration: none;
+        color: #f9f9f9
       }
       .main_part{
         width: auto;
