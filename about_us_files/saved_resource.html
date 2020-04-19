@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_about_page -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body contenteditable="false">
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>We are a group of amazing pandas that can forsee the weather~!</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="./55408.jpg" alt="Kuba" style="width:100%">
+      <div class="container">
+        <h2>Panda Kuba</h2>
+        <p class="title">Co-organizer &amp; Graphics Expert</p>
+        <p>The co-organizer of our project, responsible for general content and outline of our Website. Animation expert.</p>
+        <p>jakub@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="./837133-vertical-kawaii-tare-panda-wallpaper-1920x1080.jpg" alt="Krzysztof" style="width:100%">
+      <div class="container">
+        <h2>Panda Krzysztof</h2>
+        <p class="title">Co-organizer &amp; Graphics Expert</p>
+        <p>Graphics and animation expert. Responsible for how presentable is our Website.</p>
+        <p>krzysztof@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="./Bears_Pandas_Painting_453886.jpg" alt="Ola" style="width:100%">
+      <div class="container">
+        <h2>Panda Ola</h2>
+        <p class="title">Reseacher &amp; Planner</p>
+        <p>The planner of how our site should work and look. She's also a person behind our "How-to" page ("O programie").</p>
+        <p>ola@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="./cartoon-panda-with-flowers-on-a-white-background-vector-25508179.jpg" alt="Nikola" style="width:100%">
+      <div class="container">
+        <h2>Panda Nikola</h2>
+        <p class="title">Reseacher &amp; Planner</p>
+        <p>Reaseach on chatbot subject. Creator of Contact details.The planner of features on our Website.</p>
+        <p>nikola@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+      <div class="column">
+    <div class="card">
+      <img src="./6fcd9f56cccbd547a86380c6f2310248.jpg" alt="Agnieszka" style="width:100%">
+      <div class="container">
+        <h2>Panda Agnieszka</h2>
+        <p class="title">Support</p>
+        <p>Technical support. Creator of "Help" and "About Us" subpages.</p>
+        <p>agnieszka@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+
+</div>
+
+
+
+</div></div></body></html>

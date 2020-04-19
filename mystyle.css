@@ -31,10 +31,16 @@
         margin-left: 10px;
         margin-right: 10px;
     }
+    .sidebar_part {
+      margin-left: 200px;
+    }
+    .main_part {
+      width: 100%;
+    }
     #sidebar {
         list-style-type: none;
         margin: 0;
-        padding: 0;
+        padding: 0px;
         width: 200px;
         position: absolute;
         top: 71.5px;
@@ -90,8 +96,7 @@
       color: #f9f9f9
     }
     .main_part{
-      width: auto;
-      flex-grow:2;
+
     }
     .sidebar_part{
       align-self: right;
