@@ -43,7 +43,7 @@
         padding: 0px;
         width: 200px;
         position: absolute;
-        top: 71.5px;
+        top: 0px;
         right: 0px;
         background-color: #f9f9f9;
         height: 100%; /* Full height */
@@ -55,6 +55,8 @@
       display: block;
       padding: 20px 16px;
       text-decoration: none;
+      font-family: Comfortaa, monospace;
+      text-align: left;
     }
     
     /* Change the color on hover */
@@ -96,7 +98,8 @@
       color: #f9f9f9
     }
     .main_part{
-
+      width: auto;
+      flex-grow:2;
     }
     .sidebar_part{
       align-self: right;
