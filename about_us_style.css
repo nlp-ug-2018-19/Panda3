@@ -28,6 +28,7 @@ img {
   text-align: center;
   background-color: #474e5d;
   color: white;
+  float: center;
 }
 
 .container {
