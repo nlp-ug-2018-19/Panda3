@@ -102,3 +102,6 @@
       align-self: right;
       width:200px;
     }
+    #description {
+      font-size: 18px;
+  }
