@@ -1,4 +1,5 @@
-    h1 {
+@media (min-width: 801px) {
+h1 {
         background: url(images/background.png);
         background-color: rgb(237, 248, 79);
         background-repeat: no-repeat;
@@ -108,4 +109,109 @@
     #description {
       font-size: 18px;
       margin-right: 220px;
+  }
+}
+@media (max-width: 800px) {
+  h1 {
+          background: url(images/background.png);
+          background-color: rgb(237, 248, 79);
+          background-repeat: no-repeat;
+          background-size: cover;
+          font-family: Asap Condensed, monospace;
+          height: 50px
+      }
+      #rec-button {
+          width: 24px;
+          height: 24px;
+      }
+      #rec-button-wrapper {
+        text-align: center;
+      }
+      #logo {
+          padding-top: 0.3em;
+          padding-left: 0.1em;
+          width: 35px;
+          height: 35px;
+      }
+      body {
+          background: linear-gradient(90deg, rgb(61, 137, 199), rgb(169, 216, 255));
+          font-family: Comfortaa, monospace;
+          margin-bottom: 0px;
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 0;
+      }
+      #content {
+          margin-left: 10px;
+          margin-right: 10px;
+      }
+
+      #sidebar {
+          list-style-type: none;
+          padding: 0px;
+          width: 200px;
+          background-color: #f9f9f9;
+          overflow: auto
+        }
+        
+      #sidebar li{
+        display: block;
+        padding: 20px 16px;
+        text-decoration: none;
+        font-family: Comfortaa, monospace;
+        text-align: left;
+      }
+      
+      /* Change the color on hover */
+      #sidebar li:hover {
+        background-color: rgb(237, 248, 79);
+        color: black;
+      }
+      li a{
+        text-decoration: none;
+        color: black
+      }
+      textarea {
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #000;
+        border-radius: 4px;
+        background-color: #fff;
+        resize: none;
+      }
+      .container{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+      }
+      .footer {
+        font-family: Karla, monospace;
+        font-size: 10px;
+        position: fixed;
+        height: 2%;
+        background-color: #00000054;
+        color: #f9f9f9;
+        bottom: 0px;
+        left: 0px;
+        right: 200px;
+        margin-bottom: 0px;
+      }
+      .footer a {
+        text-decoration: none;
+        color: #f9f9f9
+      }
+      .main_part{
+        width: 401px;
+        flex-grow:2;
+      }
+      .sidebar_part{
+        width: auto;
+      }
+      #description {
+        font-size: 18px;
+        margin-right: 220px;
+    }
   }
