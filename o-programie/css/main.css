@@ -264,14 +264,14 @@
 			display: inline-block;
 			margin: 0 0 2em 0;
 			padding: 0.5em;
-			border: solid 1px rgba(255, 255, 255, 0.25);
-			background-color: rgba(255, 255, 255, 0.075);
+			border: solid 1px rgba(238, 232, 232, 0.986);
+			background-color: rgb(255, 255, 255);
 		}
 
 			#header .avatar img {
 				border-radius: 100%;
 				display: block;
-				width: 10em;
+				width: 20em;
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -389,10 +389,6 @@ a:hover
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu
 {
   position: absolute;
