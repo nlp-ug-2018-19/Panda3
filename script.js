@@ -19,6 +19,10 @@ startButton.onclick = function() {
 // KEYWORDS
 var Temperature = false;
 var Humidity = false;
+var Wind = false;
+var Weather = false;
+var Pressure = false;
+var Fog = false;
 let City ="";
 
 var conversation = document.querySelector(".conversation");
@@ -32,7 +36,6 @@ recognition.onresult = function(event) {
   var Words = utt.split(" ")
       console.log (Words)
       for (prop in Words) {
-        console.log(Words[prop] + " " + (typeof (Words[prop])));
         if (Words[prop] == "temperature") {
           Temperature = true 
         }
@@ -42,6 +45,27 @@ recognition.onresult = function(event) {
           Humidity = true
         }
       };
+      for (prop in Words) {
+        if (Words[prop] == "wind") {
+          Wind = true
+        }
+      };
+      for (prop in Words) {
+        if (Words[prop] == "weather") {
+          Weather = true
+        }
+      };
+      for (prop in Words) {
+        if (Words[prop] == "pressure") {
+          Pressure = true
+        }
+      };
+      for (prop in Words) {
+        if ((Words[prop] == "fog") || (Words[prop] == "mist")) {
+          Fog = true
+        }
+      };
+      //Find the city
       for (prop in Words) {
         for (item in Words[prop].split("")) {
           console.log((Words[prop])[item])
@@ -73,6 +97,41 @@ recognition.onresult = function(event) {
               conversation.appendChild(linebreak2);
               Humidity = false 
           };
+
+          if ( Wind == true) {
+            useSpeechSynth("the speed of the wind in " + City + " is " + response.wind.speed + " meters per second")
+            conversation.append("Weatherbot: " + "The speed of the wind in " + City + " is " + response.wind.speed + " m/s.");
+            var linebreak2 = document.createElement("br");
+            conversation.appendChild(linebreak2);
+            Wind = false 
+        };
+          if ( Weather == true) {
+            useSpeechSynth("the general weather in " + City + " is " + response.weather[0].description)
+            conversation.append("Weatherbot: " + "The general weather in " + City + " is: " + response.weather[0].description + ".");
+            var linebreak2 = document.createElement("br");
+            conversation.appendChild(linebreak2);
+            Weather = false 
+        };
+          if (Pressure == true) {
+            useSpeechSynth("the atmospheric pressure in " + City + " is " + response.main.pressure + "hectopascals")
+            conversation.append("Weatherbot: " + "The atmospheric pressure in " + City + " is: " + response.main.pressure + " hPa.");
+            var linebreak2 = document.createElement("br");
+            conversation.appendChild(linebreak2);
+            Pressure = false 
+        };
+        if (Fog == true) {
+          if (response.weather[1].description == "mist") {
+            useSpeechSynth("there is mist in " + City)
+            conversation.append("Weatherbot: " + "There is mist in " + City + ".");
+          }
+          else if (response.weather[1].description == "fog") {
+            useSpeechSynth("there is fog in " + City)
+            conversation.append("Weatherbot: " + "There is fog in " + City + ".");
+          }
+          var linebreak2 = document.createElement("br");
+          conversation.appendChild(linebreak2);
+          Fog = false 
+      };
           City = ""
       }
           )
