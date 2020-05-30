@@ -1,4 +1,56 @@
 @media (min-width: 801px) {
+  #rec-button {
+      width: 24px;
+      height: 24px;
+  }
+  #rec-button-wrapper {
+    text-align: center;
+  }
+
+  body {
+    background-color: #000;
+    background-image: url("https://i.pinimg.com/originals/e7/44/30/e74430372077a845c48698bf963014b2.jpg");
+    background-size: cover;
+    background-position: top center;
+  }
+  #content {
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  
+  .main_part {
+    width: 100%;
+  }
+
+  .conversation {
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: #fff;
+    resize: none;
+  }
+  .container{
+    display: flex;
+  }
+
+  .main_part{
+    width: auto;
+    flex-grow:2;
+  }
+  .sidebar_part{
+    align-self: right;
+    width:200px;
+  }
+  #description {
+    font-size: 18px;
+    margin-right: 220px;
+}
+}
+@media (max-width: 800px) {
 h1 {
         background: url(images/background.png);
         background-color: rgb(237, 248, 79);
@@ -14,65 +66,14 @@ h1 {
     #rec-button-wrapper {
       text-align: center;
     }
-    #logo {
-        padding-top: 0.3em;
-        padding-left: 0.1em;
-        width: 35px;
-        height: 35px;
-    }
-    body {
-        background: linear-gradient(90deg, rgb(61, 137, 199), rgb(169, 216, 255));
-        font-family: Comfortaa, monospace;
-        margin-bottom: 0px;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-    }
     #content {
         margin-left: 10px;
         margin-right: 10px;
     }
-    .sidebar_part {
-      margin-left: 200px;
-    }
-    .main_part {
-      width: 100%;
-    }
-    #sidebar {
-        list-style-type: none;
-        margin: 0;
-        padding: 0px;
-        width: 200px;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        background-color: #f9f9f9;
-        height: 100%; /* Full height */
-        position: fixed; /* Make it stick, even on scroll */
-        overflow: auto
-      }
-      
-    #sidebar li{
-      display: block;
-      padding: 20px 16px;
-      text-decoration: none;
-      font-family: Comfortaa, monospace;
-      text-align: left;
-    }
     
-    /* Change the color on hover */
-    #sidebar li:hover {
-      background-color: rgb(237, 248, 79);
-      color: black;
-    }
-    li a{
-      text-decoration: none;
-      color: black
-    }
-    .conversation {
+    textarea {
       width: 100%;
-      height: 300px;
-      overflow: auto;
+      height: 150px;
       padding: 12px 20px;
       box-sizing: border-box;
       border: 2px solid #000;
@@ -82,137 +83,194 @@ h1 {
     }
     .container{
       display: flex;
-    }
-    .footer {
-      font-family: Karla, monospace;
-      font-size: 10px;
-      position: fixed;
-      height: 2%;
-      background-color: #00000054;
-      color: #f9f9f9;
-      bottom: 0px;
-      left: 0px;
-      right: 200px;
-      margin-bottom: 0px;
-    }
-    .footer a {
-      text-decoration: none;
-      color: #f9f9f9
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
     }
     .main_part{
-      width: auto;
+      width: 401px;
       flex-grow:2;
-    }
-    .sidebar_part{
-      align-self: right;
-      width:200px;
     }
     #description {
       font-size: 18px;
       margin-right: 220px;
   }
 }
-@media (max-width: 800px) {
-  h1 {
-          background: url(images/background.png);
-          background-color: rgb(237, 248, 79);
-          background-repeat: no-repeat;
-          background-size: cover;
-          font-family: Asap Condensed, monospace;
-          height: 50px
-      }
-      #rec-button {
-          width: 24px;
-          height: 24px;
-      }
-      #rec-button-wrapper {
-        text-align: center;
-      }
-      #logo {
-          padding-top: 0.3em;
-          padding-left: 0.1em;
-          width: 35px;
-          height: 35px;
-      }
-      body {
-          background: linear-gradient(90deg, rgb(61, 137, 199), rgb(169, 216, 255));
-          font-family: Comfortaa, monospace;
-          margin-bottom: 0px;
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 0;
-      }
-      #content {
-          margin-left: 10px;
-          margin-right: 10px;
-      }
 
-      #sidebar {
-          list-style-type: none;
-          padding: 0px;
-          width: 200px;
-          background-color: #f9f9f9;
-          overflow: auto
-        }
-        
-      #sidebar li{
-        display: block;
-        padding: 20px 16px;
-        text-decoration: none;
-        font-family: Comfortaa, monospace;
-        text-align: left;
-      }
-      
-      /* Change the color on hover */
-      #sidebar li:hover {
-        background-color: rgb(237, 248, 79);
-        color: black;
-      }
-      li a{
-        text-decoration: none;
-        color: black
-      }
-      textarea {
-        width: 100%;
-        height: 150px;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        border: 2px solid #000;
-        border-radius: 4px;
-        background-color: #fff;
-        resize: none;
-      }
-      .container{
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: center;
-      }
-      .footer {
-        font-family: Karla, monospace;
-        font-size: 10px;
-        position: fixed;
-        height: 2%;
-        background-color: #00000054;
-        color: #f9f9f9;
-        bottom: 0px;
-        left: 0px;
-        right: 200px;
-        margin-bottom: 0px;
-      }
-      .footer a {
-        text-decoration: none;
-        color: #f9f9f9
-      }
-      .main_part{
-        width: 401px;
-        flex-grow:2;
-      }
-      .sidebar_part{
-        width: auto;
-      }
-      #description {
-        font-size: 18px;
-        margin-right: 220px;
-    }
+/* MENU STYLES */
+
+
+a
+{
+text-decoration: none;
+color: black;
+
+transition: color 0.3s ease;
+}
+
+a:hover
+{
+color: rgb(52, 52, 56);
+}
+
+#menuToggle
+{
+display: block;
+position: absolute;
+top: 50px;
+right: 50px;
+
+z-index: 1;
+
+-webkit-user-select: none;
+user-select: none;
+}
+
+#menuToggle input
+{
+display: block;
+width: 40px;
+height: 32px;
+position: absolute;
+top: -7px;
+left: -5px;
+
+cursor: pointer;
+
+opacity: 0; 
+z-index: 2;
+
+-webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+display: block;
+width: 33px;
+height: 4px;
+margin-bottom: 5px;
+position: relative;
+
+background: #cdcdcd;
+border-radius: 3px;
+
+z-index: 1;
+
+transform-origin: 4px 0px;
+
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+opacity: 1;
+transform: rotate(45deg) translate(-2px, -1px);
+background: black;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+opacity: 0;
+transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+opacity: 1;
+transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+position: absolute;
+width: 300px;
+margin: -100px 0 0 0;
+padding: 50px;
+padding-top: 160px;
+right: -100px;
+
+background: white;
+list-style-type: none;    
+transform-origin: 0% 0%;
+transform: translate(100%, 0);
+
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+padding: 10px 0;
+font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul
+{
+transform: none;
+opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+#menu {
+  transform: none;
+  opacity: 0;
+
+  transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+}
+
+/* Header */
+
+#header {
+text-align: center;
+padding: 6em 0 4em 0;
+}
+
+#header h1 {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+#header .avatar {
+  border-radius: 100%;
+  display: inline-block;
+  margin: 0 0 2em 0;
+  padding: 0.5em;
+  border: solid 1px rgba(238, 232, 232, 0.986);
+  background-color: rgb(255, 255, 255);
+}
+
+  #header .avatar img {
+    border-radius: 100%;
+    display: block;
+    width: 20em;
   }
+
+@media screen and (max-width: 1280px) {
+
+  #header {
+    padding: 4em 0 2em 0;
+  }
+
+}
+/* Footer */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  color: black;
+  text-align: center;
+}
