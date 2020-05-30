@@ -9,15 +9,15 @@
 </head>
 <body>
     <div>
-    <!--Logo and name-->
-        <h1><img id="logo" src="images/umbrella.png" alt="Site logo">Weatherbot</h1>
-    </div>
+    <!--logo -->
+    <header id="header">
+        <span class="avatar"><img src="https://i.pinimg.com/originals/c3/35/20/c335201742c745f8ced0c72e69523d24.jpg" alt="" /></span>
+    </header>
 
     <div class='container'>
         <div class='main_part'>
             <div id="content">
                 <!--Chatbot Box here-->
-                Weatherbot
                 <div class="conversation">
                 </div>
             </div>
@@ -26,21 +26,28 @@
                 <button type="button" alt="Press to ask Weatherbot a question">Ask Weatherbot</button>
             </div>
             </div>
-            <div class='sidebar_part'>
-                <div>
-                    <!--Sidebar-->
-                    <ul id="sidebar">
-                        <li><a href="index.html">Strona Główna</a></li>
-                        <li>Język</li>
-                        <li><a href="about_us.html">O nas</a></li>
-                        <li><a href="help.html">Pomoc</a></li>
+                <!--menu-->
+
+                <nav role='navigation'>
+                    <div id="menuToggle">
+                    <input type="checkbox" />
+                    
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <ul id="menu">
+                        <li><link><a href="index.html">Strona główna</a></link></li>
+                        <li><link><a href="index_en.html">Switch to English</a></link></li>
+                        <li><link><a href="about_us.html">O nas</a></link></li>
+                        <li><link><a href="pomoc.html">Pomoc</a></link></li>
                         <li><link><a href="kontakt.html">Kontakt</a></link></li>
                         <li><link><a href="oprogramie.html">O programie</a></link></li>
                     </ul>
-                </div>
-            </div>
+                    </div>
+                </nav>
             <div class='footer'>
-                © <a href="https://github.com/nlp-ug-2018-19/Panda3">Panda3 Team</a>
+                <a href="https://github.com/nlp-ug-2018-19/Panda3">Panda3 Team</a>
             </div>
     </div>
 </body>
