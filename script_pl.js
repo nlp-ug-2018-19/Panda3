@@ -183,6 +183,8 @@ recognition.onresult = function(event) {
 catch (err) {
   useSpeechSynth("Upewnij się, że mówisz wyraźnie i podano prawidłową nazwę miasta")
   conversation.append("Weatherbot: Upewnij się, że mówisz wyraźnie i podano prawidłową nazwę miasta.");
+  var linebreak2 = document.createElement("br");
+  conversation.appendChild(linebreak2);
 }
 }
 function float2int (value) {

@@ -151,6 +151,8 @@ recognition.onresult = function(event) {
 catch (err) {
   useSpeechSynth("Please make sure you speak clearly and use the right city name")
   conversation.append("Weatherbot: Please make sure you speak clearly and use the right city name.");
+  var linebreak2 = document.createElement("br");
+  conversation.appendChild(linebreak2);
   }
 }
 
