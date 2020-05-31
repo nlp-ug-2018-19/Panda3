@@ -21,7 +21,7 @@
 	body {
 		background-color: #000;
 		background-image: url("../../o-programie/images/bg.jpg");
-		background-size: auto;
+		background-size: cover;
 		background-position: top center;
 	}
 
@@ -235,7 +235,9 @@
 				.miniatury h3 {
 					font-size: 1em;
 				}
-
+			body {
+				background-size: cover;
+			}
 		}
 
 /* Wrapper */
