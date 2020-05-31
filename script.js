@@ -77,7 +77,7 @@ recognition.onresult = function(event) {
       console.log("TEMP " + Temperature);
       console.log("HUM " + Humidity);
       console.log("CITY " + City)
-
+    try {
       let url = "https://api.openweathermap.org/data/2.5/weather?q=" + City + "&appid=a4b92e45ab61cfc3cb9be1af36127c2d";
       fetch(url)
       .then(response => response.json())
@@ -145,10 +145,14 @@ recognition.onresult = function(event) {
           City = ""
       }
           )
+    }
 
 
-
+catch (err) {
+  useSpeechSynth("Please make sure you speak clearly and use the right city name")
+  conversation.append("Weatherbot: Please make sure you speak clearly and use the right city name.");
   }
+}
 
 function float2int (value) {
   return value | 0;
