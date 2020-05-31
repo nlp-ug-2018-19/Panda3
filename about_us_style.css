@@ -74,4 +74,7 @@ footer {
   #header {
     font-size: 10px;
   }
+  .header-break {
+    display: block;
+  }
 }
