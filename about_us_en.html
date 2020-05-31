@@ -9,53 +9,48 @@
     <link rel="stylesheet" href="about_us_style.css">
 
     <script src="jquery-3.5.0.min.js"></script>
-    <script src="sprite.js"></script>
-
-
+    
     <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
     <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
 
 
     <script>
-        $(document).ready(function() {
-            $('#jquery').css('width', '142px');
-            $('#jquery').css('height', '142px');
-            $('#jquery').css('background-image', 'url(test01.png)');
-            //$('#jquery').css('border','20px solid black');
-            var i = 0
-            $('#jquery').animateSprite({
-                fps: 6,
-                animations: {
-                    row1: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33],
-                },
-                loop: true,
-                complete: function() {
-
-                    // use complete only when you set animations with 'loop: false'
-                    //alert("animation End");
-                }
-            });
-            });
-               $( function() {
-    $( "#tabs" ).tabs();
-  } );
-  </script>
-
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+    </script>
 </head>
 
 <body>
-    <div>
-        <!--Logo and name-->
-        <h1><img id="logo" src="images/umbrella.png" alt="Site logo">Weatherbot</h1>
-    </div>
+        <nav role='navigation'>
+            <div id="menuToggle">
+              <input type="checkbox" />
+              
+              <span></span>
+              <span></span>
+              <span></span>
+            
+              <ul id="menu">
+                <li><link><a href="index.html">Home</a></link></li>
+                <li><link><a href="jezyk.html">Język polski</a></link></li>
+                <li><link><a href="about_us.html">About us</a></link></li>
+                <li><link><a href="help_en.html">Help</a></link></li>
+                <li><link><a href="kontakt.html">Contact</a></link></li>
+                <li><link><a href="oprogramie_en.html">About the software</a></link></li>
+              </ul>
+            </div>
+          </nav>
+          
+            <div id="wrapper">
 
-    <div class='container'>
-        <div class="main_part">
+                <header id="header">
+                        <span class="avatar"><img src="o-programie/images/avatar1.jpg" alt="" /></span>
 
-            <div class="about-section">
-                <div id="jquery"></div>
-                <h2>About Us</h2>
-                <p>We are a group of awesome and lovely pandas that are able to forsee the weather~!</p>
+                    <h1><strong>About Us</strong><br />
+                    We are a group of awesome and lovely pandas that are able to forsee the weather~!</h1>
+                
+                </header>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -145,27 +140,6 @@
   </div>
 </div>
        
-            </div>
-        </div>
-        <!--SIDEBAR-->
-        <div class='sidebar_part'>
-            <div>
-                <ul id="sidebar">
-                    <li><a href="index.html">Strona Główna</a></li>
-                    <li>Język</li>
-                    <li>
-                        <link><a href="about_us.html">O nas</a></link>
-                    </li>
-                    <li>
-                        <a href="help.html">Pomoc</a>
-                    </li>
-                    <li>
-                        <link><a href="kontakt.html">Kontakt</a></link>
-                    </li>
-                    <li>
-                        <link><a href="oprogramie.html">O programie</a></link>
-                    </li>
-                </ul>
             </div>
         </div>
         <div class='footer'>

@@ -8,8 +8,18 @@ html {
 }
 
 img {
-  width: 80%
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
 }
+p, h2 {
+  float: center;
+  text-align: center;
+}
+
 .column {
   float: left;
   width: calc(33%-200px);
@@ -42,11 +52,14 @@ img {
   content: "";
   clear: both;
   display: table;
+  float: center;
+  text-align: center;
 }
 
 .title {
   color: grey;
-
+  float: center;
+  text-align: center;
 }
 
 

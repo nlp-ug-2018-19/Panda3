@@ -2,21 +2,40 @@
 <link href="https://fonts.googleapis.com/css?family=Asap+Condensed|Karla&display=swapComfortaa:wght@500&display=swap" rel="stylesheet">
 
 <head>
-    <title>O nas</title>
+    <title>Weatherbot</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
     <link rel="stylesheet" href="about_us_style.css">
-    <link rel="stylesheet" href="o-programie/css/main.css" />
 
     <script src="jquery-3.5.0.min.js"></script>
-    
+    <script src="sprite.js"></script>
+
+
     <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
     <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
 
 
     <script>
+        $(document).ready(function() {
+            $('#jquery').css('width', '142px');
+            $('#jquery').css('height', '142px');
+            $('#jquery').css('background-image', 'url(test01.png)');
+            //$('#jquery').css('border','20px solid black');
+            var i = 0
+            $('#jquery').animateSprite({
+                fps: 6,
+                animations: {
+                    row1: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33],
+                },
+                loop: true,
+                complete: function() {
 
+                    // use complete only when you set animations with 'loop: false'
+                    //alert("animation End");
+                }
+            });
+            });
                $( function() {
         $( "#tabs" ).tabs();
         } );
@@ -25,35 +44,18 @@
 </head>
 
 <body>
-        <nav role='navigation'>
-            <div id="menuToggle">
-              <input type="checkbox" />
-              
-              <span></span>
-              <span></span>
-              <span></span>
-            
-              <ul id="menu">
-                <li><link><a href="index.html">Home</a></link></li>
-                <li><link><a href="jezyk.html">Język polski</a></link></li>
-                <li><link><a href="about_us.html">About us</a></link></li>
-                <li><link><a href="help_en.html">Help</a></link></li>
-                <li><link><a href="kontakt.html">Contact</a></link></li>
-                <li><link><a href="oprogramie_en.html">About the software</a></link></li>
-              </ul>
-            </div>
-          </nav>
-          
-            <div id="wrapper">
+    <div>
+        <!--Logo and name-->
+        <h1><img id="logo" src="images/umbrella.png" alt="Site logo">Weatherbot</h1>
+    </div>
 
-                <header id="header">
-                        <span class="avatar"><img src="o-programie/images/avatar1.jpg" alt="" /></span>
+    <div class='container'>
+        <div class="main_part">
 
-                    <h1><strong>O nas</strong><br />
-                    Jesteśmy grupą niesamowitych pand, które potrafią przewidzieć pogodę~!</h1>
-                
-                </header>
-    
+            <div class="about-section">
+                <div id="jquery"></div>
+                <h2>About Us</h2>
+                <p>We are a group of awesome and lovely pandas that are able to forsee the weather~!</p>
 <!doctype html>
 <html lang="en">
 <head>
@@ -87,7 +89,7 @@
                                     <div class="new_container">
                                         <h2>Panda Krzysztof</h2>
                                         <p class="title">Team Leader</p>
-                                        <p>Team Leader naszej grupki pand. Ogarnia zadania ospałym misiom. Panda odpowiedzialna za graficzny aspekt naszej strony <br> jak i jej wersję angielską.</p>
+                                        <p>Our Team Leader. He organizes tasks for our lovely sleepy black-and-white bears. This panda is responsible for the graphical aspect of our website.</p>
                                     </div>
                                 </div>
                             
@@ -98,8 +100,10 @@
                         <img src="./images/kubam.jpg" alt="Kuba">
                         <div class="new_container">
                             <h2>Panda Kuba</h2>
-                                <p class="title">Koorganizator & Specjalista ds. graficznych</p>
-                                <p>Vice Team Leader. Machając bambusem pomaga rozdzielić zadania między puchate czarno-białe kuleczki. Twórca chatbota. Panda odpowiedzialna za szkielet naszej strony oraz pomoc graficzną.</p>
+                                <p class="title">Co-organizer & Graphical Specialist</p>
+                                <p>Vice Team Leader.</p>
+                                <p>By swinging a bamboo stick he helps in assigning tasks to the other pandas. Chatbot creator. This panda is also responsible for framework and help with graphics.
+                                </p>
                             </div>
                         </div>
   </div>
@@ -109,8 +113,9 @@
                         <img src="./images/nikolag.jpg" alt="Nikola">
                         <div class="new_container">
                             <h2>Panda Nikola</h2>
-                            <p class="title">Reseach & Logistyka</p>
-                            <p>Panda szukająca motylków o chatbotowej tematyce. Twórczyni podstronki "Kontakt" oraz pomoc logistyczna przy funkcjach naszej strony.</p>
+                            <p class="title">Reseach & Logistics</p>
+                            <p>This panda looks for butterflies that have chatbot-related featurezs. She creted "Contact Us" page; also resposible for logistics on oue website.  
+                            </p>
                         </div>
                     </div>
 
@@ -121,7 +126,8 @@
                         <div class="new_container">
                             <h2>Panda Ola</h2>
                             <p class="title">Research & Planner</p>
-                            <p>Panda rysująca bambusem w piasku jak nasza stronka ma wyglądać. Także panda pisząca "O programie".</p>
+                            <p>This panda draws on sand pictures how our site should look like. The author of "About Our Programme."
+                            </p>
                         </div>
                     </div>
 
@@ -132,7 +138,8 @@
                         <div class="new_container">
                             <h2>Panda Agnieszka</h2>
                             <p class="title">Support</p>
-                            <p>Panda rysująca bambusem znaczki jak się poruszać po stronie: "Pomoc". <br> Także panda odpowiedzialna za tę część ("O nas") naszej strony oraz pomoc techniczną.</p>
+                            <p>This panda draws with a bamboo signs how to move about our site ("Help" page). Sh is responsible for this page ("About Us") as well.
+                            </p>
                         </div>
                     </div>
   </div>
@@ -140,9 +147,30 @@
        
             </div>
         </div>
-     <div class='footer'>
-        @ <a href="https://github.com/nlp-ug-2018-19/Panda3">Panda3 Team</a>
+        <!--SIDEBAR-->
+        <div class='sidebar_part'>
+            <div>
+                <ul id="sidebar">
+                    <li><a href="index.html">Strona Główna</a></li>
+                    <li>Język</li>
+                    <li>
+                        <link><a href="about_us.html">O nas</a></link>
+                    </li>
+                    <li>
+                        <a href="help.html">Pomoc</a>
+                    </li>
+                    <li>
+                        <link><a href="kontakt.html">Kontakt</a></link>
+                    </li>
+                    <li>
+                        <link><a href="oprogramie.html">O programie</a></link>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class='footer'>
+            © <a href="https://github.com/nlp-ug-2018-19/Panda3">Panda3 Team</a>
+        </div>
     </div>
-    
 
 </body>
