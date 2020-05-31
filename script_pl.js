@@ -18,10 +18,26 @@ startButton.onclick = function() {
 
 // KEYWORDS
 var Temperature = false;
-let tempPattern = /temperatur(e|a|ę)/
+let tempPattern = /temperatur(e|a|ę)/;
 var Humidity = false;
-let humPattern = /wilgo(ć|tno)/
+let humPattern = /wilgo(ć|tno)/;
+var Wind = false;
+let windPattern = /wiatr|wietrznie|wieje/;
+var Pressure = false;
+let pressurePattern = /ciśnieni(e|a)/;
+var Fog = false;
+let fogPattern = /mgł(a|ę|y)/;
 let City ="";
+let owiePattern = /owie$/;
+let awiePattern = /(?<!o)wie$/;
+let nPattern = /(?<=(n|m))ie$/;
+let achPattern = /(?<!ł)ach$/;
+let lachPattern = /łach$/;
+let awiuPattern = /awiu$/;
+let szczyPattern = /szczy$/;
+let kuPattern = /(?<=(k|g))u$/;
+let niPattern = /(?<=(n|m))ii?$/;
+let niuPattern = /niu$/;
 
 var conversation = document.querySelector(".conversation");
 
@@ -43,12 +59,57 @@ recognition.onresult = function(event) {
         if (humPattern.test(Words[prop])) {
           Humidity = true
         }
+      };        
+      for (prop in Words) {
+        if (windPattern.test(Words[prop])) {
+          Wind = true
+        }
+      };          
+      for (prop in Words) {
+        if (pressurePattern.test(Words[prop])) {
+          Pressure = true
+        }
+      };        
+      for (prop in Words) {
+        if (fogPattern.test(Words[prop])) {
+          Fog = true
+        }
       };
       for (prop in Words) {
         for (item in Words[prop].split("")) {
           console.log((Words[prop])[item])
           if ((Words[prop])[item] == (Words[prop])[item].toUpperCase()) {
             City = Words[prop]
+            if (owiePattern.test(City)) {
+              cityCon = City.replace(owiePattern, 'ów')
+              }
+            else if (awiePattern.test(City)) {
+              cityCon = City.replace(awiePattern, 'wa')
+              }
+            else if (nPattern.test(City)) {
+              cityCon = City.replace(nPattern, '')
+              }
+            else if (achPattern.test(City)) {
+              cityCon = City.replace(achPattern, 'e')
+              }
+            else if (lachPattern.test(City)) {
+              cityCon = City.replace(lachPattern, 'ły')
+              }              
+            else if (awiuPattern.test(City)) {
+              cityCon = City.replace(awiuPattern, 'aw')
+              }              
+            else if (szczyPattern.test(City)) {
+              cityCon = City.replace(szczyPattern, 'szcz')
+              }              
+            else if (kuPattern.test(City)) {
+              cityCon = City.replace(kuPattern, '')
+              }
+            else if (niPattern.test(City)) {
+              cityCon = City.replace(niPattern, 'ia')
+            }
+            else if (niuPattern.test(City)) {
+              cityCon = City.replace(niuPattern, 'ń')
+            }
           }
         }
       };
@@ -56,7 +117,7 @@ recognition.onresult = function(event) {
       console.log("HUM " + Humidity);
       console.log("CITY " + City)
 
-      let url = "https://api.openweathermap.org/data/2.5/weather?q=" + City + "&appid=a4b92e45ab61cfc3cb9be1af36127c2d";
+      let url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityCon + "&appid=a4b92e45ab61cfc3cb9be1af36127c2d";
       fetch(url)
       .then(response => response.json())
       .then(response => {
@@ -75,6 +136,43 @@ recognition.onresult = function(event) {
               conversation.appendChild(linebreak2);
               Humidity = false 
           };
+          if ( Wind == true) {
+            useSpeechSynth("Prędkość wiatru w " + City + " to " + response.wind.speed + " metrów na sekundę")
+            conversation.append("Weatherbot: " + "Prędkość wiatru w " + City + " to " + response.wind.speed + " m/s.");
+            var linebreak2 = document.createElement("br");
+            conversation.appendChild(linebreak2);
+            Wind = false 
+        };
+          if (Pressure == true) {
+            useSpeechSynth("Ciśnienie w " + City + " wynosi " + response.main.pressure + "hektopaskali")
+            conversation.append("Weatherbot: " + "Ciśnienie w " + City + " wynosi " + response.main.pressure + " hPa.");
+            var linebreak2 = document.createElement("br");
+            conversation.appendChild(linebreak2);
+            Pressure = false 
+        };
+        if (Fog == true) {
+          try {
+            if (response.weather[1].description == "mist") {
+              useSpeechSynth("W " + City + " jest mgła")
+              conversation.append("Weatherbot: " + "W " + City + " jest mgła.");
+            }
+            else if (response.weather[1].description == "fog") {
+              useSpeechSynth("W " + City + " jest mgła")
+              conversation.append("Weatherbot: " + "W " + City + " jest mgła.");
+            }
+            else {
+              useSpeechSynth("W " + City + " nie ma mgły")
+              conversation.append("Weatherbot: " + "W " + City + " nie ma mgły.");
+            }
+        }
+          catch (err) {
+            useSpeechSynth("W " + City + " nie ma mgły")
+            conversation.append("Weatherbot: " + "W " + City + " nie ma mgły.");
+        }
+          var linebreak2 = document.createElement("br");
+          conversation.appendChild(linebreak2);
+          Fog = false 
+        };
           City = ""
       }
           )

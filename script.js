@@ -120,13 +120,23 @@ recognition.onresult = function(event) {
             Pressure = false 
         };
         if (Fog == true) {
-          if (response.weather[1].description == "mist") {
-            useSpeechSynth("there is mist in " + City)
-            conversation.append("Weatherbot: " + "There is mist in " + City + ".");
+          try {
+            if (response.weather[1].description == "mist") {
+              useSpeechSynth("there is mist in " + City)
+              conversation.append("Weatherbot: " + "There is mist in " + City + ".");
+            }
+            else if (response.weather[1].description == "fog") {
+              useSpeechSynth("there is fog in " + City)
+              conversation.append("Weatherbot: " + "There is fog in " + City + ".");
+            }
+            else {
+              useSpeechSynth("there is no fog or mist in " + City)
+              conversation.append("Weatherbot: " + "There is no fog or mist in " + City + ".");
+            }
           }
-          else if (response.weather[1].description == "fog") {
-            useSpeechSynth("there is fog in " + City)
-            conversation.append("Weatherbot: " + "There is fog in " + City + ".");
+          catch(err) {
+            useSpeechSynth("there is no fog or mist in " + City)
+            conversation.append("Weatherbot: " + "There is no fog or mist in " + City + ".");
           }
           var linebreak2 = document.createElement("br");
           conversation.appendChild(linebreak2);
