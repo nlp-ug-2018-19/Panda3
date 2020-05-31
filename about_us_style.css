@@ -20,6 +20,10 @@ p, h2 {
   text-align: center;
 }
 
+footer {
+  text-align: center; 
+}
+
 .column {
   float: left;
   width: calc(33%-200px);
