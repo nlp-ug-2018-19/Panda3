@@ -122,7 +122,7 @@ recognition.onresult = function(event) {
       .then(response => response.json())
       .then(response => {
           if (Temperature == true) {
-              useSpeechSynth("temperatura w " + City + " wynosi " + float2int((response.main.temp - 273.15)) + " stopnie Celsjusza")
+              useSpeechSynth("temperatura w " + City + " wynosi " + float2int((response.main.temp - 273.15)) + " stopni Celsjusza")
               conversation.append("Weatherbot: " + "Temperatura w " + City + " wynosi " + float2int((response.main.temp - 273.15)) + "°C. ");
               var linebreak2 = document.createElement("br");
               conversation.appendChild(linebreak2);
