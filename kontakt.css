@@ -1,21 +1,3 @@
-/* Basic */
-
-@-ms-viewport {
-	width: device-width;
-}
-
-body {
-	-ms-overflow-style: scrollbar;
-}
-
-@media screen and (max-width: 480px) {
-
-	html, body {
-		min-width: 320px;
-	}
-
-}
-
 body {
 	background-color: #000;
 	background-image: url("https://i.pinimg.com/originals/e7/44/30/e74430372077a845c48698bf963014b2.jpg");
@@ -270,7 +252,7 @@ a:hover
 
 .container
 {
-	width: 1000px;
+	width: device-width;
 	margin: 0px auto;
 }
 
@@ -304,20 +286,19 @@ a:hover
 {
 	float: left;
 	width: 255px;
+	margin-right: 100px;
 }
 
 #featured #fbox4
 {
 	float: left;
 	width: 255px;
-	margin-right: 150px;
-	margin-left: 150px;
+	margin-right: 100px;
 }
 #featured #fbox5
 {
 	float: left;
 	width: 255px;
-	margin-right: 150px;
 }
 
 #featured img
@@ -348,5 +329,5 @@ a:hover
 	border-bottom: 1px solid #D8D8D8;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 2.50em;
-	color: #3B3B3A !important;
+	color: #3B3B3A
 }
