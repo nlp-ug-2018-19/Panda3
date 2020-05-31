@@ -32,6 +32,7 @@
     border-radius: 4px;
     background-color: #fff;
     resize: none;
+    color: black;
   }
   .container{
     display: flex;
@@ -86,6 +87,7 @@ h1 {
       border-radius: 4px;
       background-color: #fff;
       resize: none;
+      color: black;
     }
     .container{
       display: flex;
