@@ -70,10 +70,16 @@ h1 {
         margin-left: 10px;
         margin-right: 10px;
     }
-    
-    textarea {
+    body {
+      background-color: #000;
+      background-image: url("https://i.pinimg.com/originals/e7/44/30/e74430372077a845c48698bf963014b2.jpg");
+      background-size: auto;
+      background-position: top center;
+    }
+    .conversation {
       width: 100%;
       height: 150px;
+      overflow: auto;
       padding: 12px 20px;
       box-sizing: border-box;
       border: 2px solid #000;
