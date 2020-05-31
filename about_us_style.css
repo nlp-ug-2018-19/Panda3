@@ -1,4 +1,3 @@
-<style>
 html {
   box-sizing: border-box;
 }
@@ -72,5 +71,7 @@ footer {
     width: 100%;
     display: block;
   }
+  #header {
+    font-size: 10px;
+  }
 }
-</style>
